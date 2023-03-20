@@ -6,7 +6,6 @@ from rest_framework_simplejwt.views import (
 
 from . import views
 
-# You're trying to access this one right?
 urlpatterns = [
     path('', views.endpoints),
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),        #generate a token for us, the access variable we got is to be put in authorization 'bearer token' and then we can access the list
